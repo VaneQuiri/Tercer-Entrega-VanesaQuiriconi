@@ -1,0 +1,168 @@
+$titulos: (
+    "h1": red,
+    "h2": rgb(98, 0, 128),
+    "h3": blue,
+    "h4": pink,
+    "h5": violet
+);
+
+@import "variables";
+
+@mixin card (){
+    background-color: $cf-card;
+    text-align: center;
+    margin: 20px;
+    display: inline-block;
+    position:relative;
+    justify-content: center;
+    h5{
+        color: map-get($titulos, h5);
+        background-color: rgb(192, 83, 20); 
+        padding: 5px;               
+        }
+    p{
+        color: $c-texto;
+        padding: 10px;
+        text-align: justify;
+    } 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HEADER */
+.encabezado{
+    background-color: $cf-header;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    .elogo{
+        margin: 10px auto;
+        padding: 10px;
+    }
+    .etitulo{
+        margin: 10px auto;
+        padding: 10px;
+        h1{
+            font-size: 50px;
+            color: map-get($titulos, h1); 
+        }
+    }
+}  
+
+.barra{
+    background-color: $cf-barra;
+    .navbar-link{
+        color: $ct-beige;
+        &:hover{
+            color:$ct-hover;
+        }
+    }
+    .navbar-toggler{
+        border-color: bisque;
+    }
+    .collapse{
+        justify-content: space-around;
+        text-indent: 40px auto;
+    }
+}
+
+/* MAIN */ 
+main{
+    background-color: $cf-fondo;
+    .carousel-item {
+        width: auto;
+        h5{
+            color: map-get($titulos, h5);
+        }
+        p{
+            color: $c-texto;
+        }
+    }
+    
+    .subti{
+        h2{
+            background-color: $cf-barra;
+            color: map-get($titulos, h2);
+            text-align: center;
+        }
+    }
+    .somos{
+        p{
+            color: $c-texto;
+        }
+    }
+    .subti{
+        grid-area: subti;
+    }
+    .fotoLaura{
+        grid-area: fotoLaura;
+    }
+    .texto1{
+        grid-area: texto1;
+    }
+    .porque {
+        display: flex;
+        flex-direction: column;
+        .card{
+            @include card;
+        }
+    }   
+}   
+      
+/*  FOOTER  */ 
+footer{
+    background-color: $cf-footer;
+}
+
+/*  SERVICIOS  */ 
+.card{    
+    @include card;
+}
+/*
+.servicios{
+    background-color: pink;
+        display:grid;
+        grid-template-areas: 
+            "area1 area2"
+            "area3 area4" 
+            "area5 area6";
+        grid-template-rows: (1fr 1fr 1fr);
+        grid-template-columns: (1fr 1fr);
+}
+
+
+@media screen and (max-width: 800px){
+    .cartas{
+      grid-template-columns: (1fr);
+      grid-template-rows: (1fr 1fr 1fr 1fr 1fr 1fr);
+      grid-template-areas:
+        "area1"
+        "area2"
+        "area3"
+        "area4"
+        "area5"
+        "area6";
+    }
+}
+.area1{
+    grid-area: area1;
+}
+.area2{
+    grid-area: area2;
+}
+.area3{
+    grid-area: area3;
+}
+.area4{
+    grid-area: area4;
+}
+.area5{
+    grid-area: area5;
+}
+.area6{
+    grid-area: area6;
+}*/

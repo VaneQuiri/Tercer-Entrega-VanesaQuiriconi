@@ -1,0 +1,204 @@
+/* Declaraion de Variables */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* HEADER */
+.encabezado {
+  background-color: #f8cf82;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.encabezado .elogo {
+  margin: 10px auto;
+  padding: 10px;
+}
+
+.encabezado .etitulo {
+  margin: 10px auto;
+  padding: 10px;
+}
+
+.encabezado .etitulo h1 {
+  font-size: 50px;
+  color: red;
+}
+
+.barra {
+  background-color: #cc5303;
+}
+
+.barra .navbar-link {
+  color: #f1e4b6;
+}
+
+.barra .navbar-link:hover {
+  color: red;
+}
+
+.barra .navbar-toggler {
+  border-color: bisque;
+}
+
+.barra .collapse {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-indent: 40px auto;
+}
+
+/* MAIN */
+main {
+  background-color: #fdde77;
+}
+
+main .carousel-item {
+  width: auto;
+}
+
+main .carousel-item h5 {
+  color: violet;
+}
+
+main .carousel-item p {
+  color: #fadada;
+}
+
+main .subti h2 {
+  background-color: #cc5303;
+  color: #620080;
+  text-align: center;
+}
+
+main .somos p {
+  color: #fadada;
+}
+
+main .subti {
+  grid-area: subti;
+}
+
+main .fotoLaura {
+  grid-area: fotoLaura;
+}
+
+main .texto1 {
+  grid-area: texto1;
+}
+
+main .porque {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .porque .card {
+  background-color: #dd7951;
+  text-align: center;
+  margin: 20px;
+  display: inline-block;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .porque .card h5 {
+  color: violet;
+  background-color: #c05314;
+  padding: 5px;
+}
+
+main .porque .card p {
+  color: #fadada;
+  padding: 10px;
+  text-align: justify;
+}
+
+/*  FOOTER  */
+footer {
+  background-color: lightblue;
+}
+
+/*  SERVICIOS  */
+.card {
+  background-color: #dd7951;
+  text-align: center;
+  margin: 20px;
+  display: inline-block;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card h5 {
+  color: violet;
+  background-color: #c05314;
+  padding: 5px;
+}
+
+.card p {
+  color: #fadada;
+  padding: 10px;
+  text-align: justify;
+}
+
+/*
+.servicios{
+    background-color: pink;
+        display:grid;
+        grid-template-areas: 
+            "area1 area2"
+            "area3 area4" 
+            "area5 area6";
+        grid-template-rows: (1fr 1fr 1fr);
+        grid-template-columns: (1fr 1fr);
+}
+
+
+@media screen and (max-width: 800px){
+    .cartas{
+      grid-template-columns: (1fr);
+      grid-template-rows: (1fr 1fr 1fr 1fr 1fr 1fr);
+      grid-template-areas:
+        "area1"
+        "area2"
+        "area3"
+        "area4"
+        "area5"
+        "area6";
+    }
+}
+.area1{
+    grid-area: area1;
+}
+.area2{
+    grid-area: area2;
+}
+.area3{
+    grid-area: area3;
+}
+.area4{
+    grid-area: area4;
+}
+.area5{
+    grid-area: area5;
+}
+.area6{
+    grid-area: area6;
+}*/
+/*# sourceMappingURL=estilo.css.map */
