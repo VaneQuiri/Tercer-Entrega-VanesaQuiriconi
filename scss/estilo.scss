@@ -1,31 +1,13 @@
 $titulos: (
-    "h1": red,
-    "h2": rgb(98, 0, 128),
-    "h3": blue,
-    "h4": pink,
-    "h5": violet
+    "h1": #F1E9E5,
+    "h2": #F1E9E5,
+    "h3": #48bdb5,
+    "h4": #F1E9E5,
+    "h5": #d6d6e2
 );
 
 @import "variables";
-
-@mixin card (){
-    background-color: $cf-card;
-    text-align: center;
-    margin: 20px;
-    display: inline-block;
-    position:relative;
-    justify-content: center;
-    h5{
-        color: map-get($titulos, h5);
-        background-color: rgb(192, 83, 20); 
-        padding: 5px;               
-        }
-    p{
-        color: $c-texto;
-        padding: 10px;
-        text-align: justify;
-    } 
-}
+@import "mixin";
 
 *{
     margin: 0;
@@ -39,130 +21,181 @@ $titulos: (
     width: 100%;
     display: flex;
     flex-direction: row;
-    .elogo{
-        margin: 10px auto;
-        padding: 10px;
+    justify-content: start;
+    align-items: center;
+    padding: 15px;
+    h1{
+        font-size: 50px;
+        margin: 50px 0px 0px 30px;
+        color: map-get($titulos, h1); 
     }
-    .etitulo{
-        margin: 10px auto;
-        padding: 10px;
-        h1{
-            font-size: 50px;
-            color: map-get($titulos, h1); 
-        }
+    img{
+        margin: 15px;
     }
-}  
-
-.barra{
-    background-color: $cf-barra;
-    .navbar-link{
-        color: $ct-beige;
-        &:hover{
-            color:$ct-hover;
-        }
-    }
+}
+.navbar{
+    text-align: center;
+    background-color: $cf-nav;
+    border-top-style: double;
+    border-top-color: $ct-beige;
     .navbar-toggler{
-        border-color: bisque;
+        border-color: #368B85;
+        border-style: double;
+        border-radius: 5px;
     }
     .collapse{
-        justify-content: space-around;
-        text-indent: 40px auto;
-    }
+        justify-content: center;
+        .nav-link{
+            padding-inline: 20px;
+            color: $ct-beige;
+            &:hover{
+                color:$ct-hover;
+                transform: scale(1.1);
+            }
+        }
+    } 
 }
 
 /* MAIN */ 
 main{
     background-color: $cf-fondo;
     .carousel-item {
-        width: auto;
         h5{
             color: map-get($titulos, h5);
+            background-color: #4646608c;
         }
         p{
-            color: $c-texto;
+            color: $ct-beige;
+            background-color:#4646608c;
         }
     }
-    
-    .subti{
+    .mi{
+        h2{
+            @include h2;
+        }
+        .somos{
+            display: flex;
+            .fotoLaura{
+                margin: 40px auto;
+                border-radius: 30px;
+                height: 100%;
+            }
+            .texto1{
+                margin: 30px auto;
+                text-align: justify;
+                color: $c-texto;
+            }
+        }
+    }   
+    .porque {
+        background-image: url(/Imagenes/balanza.jpg);
+        display: flex;
+        margin: auto;
+        flex-direction: column;
+        justify-content: center;
         h2{
             background-color: $cf-barra;
+            background: linear-gradient(270deg, #368B85 24%, rgba(241,233,229,1) 63%);
             color: map-get($titulos, h2);
-            text-align: center;
+            font-size: x-large;
+            text-align: right;
+            padding: 15px;
         }
-    }
-    .somos{
-        p{
-            color: $c-texto;
-        }
-    }
-    .subti{
-        grid-area: subti;
-    }
-    .fotoLaura{
-        grid-area: fotoLaura;
-    }
-    .texto1{
-        grid-area: texto1;
-    }
-    .porque {
-        display: flex;
-        flex-direction: column;
         .card{
             @include card;
         }
+    } 
+
+    @media screen and (max-width:800px){
+        .somos{
+            display: flex;
+            flex-direction: column;
+            .fotoLaura{
+                width: 90%;
+                padding: 10px;
+                margin: auto;
+                border-radius: 30px;
+            }
+            .texto1{
+                padding: 10px;
+                width: 90%;
+                margin: auto;
+            }
+        }
     }   
-}   
-      
+}  
+
 /*  FOOTER  */ 
 footer{
     background-color: $cf-footer;
+    text-align: center;
+    padding: 10px;
+    h3{
+        color: map-get($titulos, h3); 
+    }
+    .botcon{
+        @include botcon;
+        &:hover{
+            background-color:#48bdb5;
+            transform: scale(1.1);
+            transition: 2s;
+        }
+    }  
 }
 
 /*  SERVICIOS  */ 
-.card{    
-    @include card;
-}
-/*
 .servicios{
-    background-color: pink;
-        display:grid;
-        grid-template-areas: 
-            "area1 area2"
-            "area3 area4" 
-            "area5 area6";
-        grid-template-rows: (1fr 1fr 1fr);
-        grid-template-columns: (1fr 1fr);
-}
-
-
-@media screen and (max-width: 800px){
-    .cartas{
-      grid-template-columns: (1fr);
-      grid-template-rows: (1fr 1fr 1fr 1fr 1fr 1fr);
-      grid-template-areas:
-        "area1"
-        "area2"
-        "area3"
-        "area4"
-        "area5"
-        "area6";
+    h2{
+        @include h2;
+    }
+    .card{
+        @include card;
+        height: 300px;
+        overflow: auto;
     }
 }
-.area1{
-    grid-area: area1;
+
+/*  NOTICIAS  */ 
+.noticias{
+    h2{
+        @include h2;
+    }
+    .card{
+        @include card;
+        width: 300px;
+    }
 }
-.area2{
-    grid-area: area2;
+
+/*   PREGUNTAS FRECUENTES   */
+.pregfrecuentes{
+    h2{
+        @include h2;
+    } 
+    h3{
+        margin-top: 20px;
+        border-color: #F1E9E5;
+        button{
+            background-color: $cf-barra;
+            color: #F1E9E5;
+        }
+    }
+    p{
+       color: $c-texto;
+    }   
 }
-.area3{
-    grid-area: area3;
+
+/*   CONTATOS   */
+.contacto{
+    h2{
+        @include h2;
+    }
+    fieldset{
+        text-align: center;
+        color: $c-texto;
+        form{
+            margin-left: 20px;
+            text-align: start;
+        }
+    }
 }
-.area4{
-    grid-area: area4;
-}
-.area5{
-    grid-area: area5;
-}
-.area6{
-    grid-area: area6;
-}*/
+
