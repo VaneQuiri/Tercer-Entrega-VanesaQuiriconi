@@ -483,22 +483,22 @@ footer .redes a:hover {
 }
 
 /*   ERROR 404   */
-main {
+.falla {
   background-color: #464660;
 }
 
-main h1 {
+.falla h1 {
   margin: 20px;
   color: #368B85;
 }
 
-main .error {
+.falla .error {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-main .error .textos {
+.falla .error .textos {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -512,15 +512,15 @@ main .error .textos {
           justify-content: start;
 }
 
-main .error .textos .tex1 {
+.falla .error .textos .tex1 {
   color: #F1E9E5;
 }
 
-main .error .textos .tex2 {
+.falla .error .textos .tex2 {
   color: #F1E9E5;
 }
 
-main .error .textos .imagen {
+.falla .error .textos .imagen {
   width: auto;
   top: 0;
   left: 0;
