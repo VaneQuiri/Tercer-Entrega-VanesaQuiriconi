@@ -24,15 +24,30 @@ $titulos: (
     justify-content: start;
     align-items: center;
     padding: 15px;
+    
     h1{
         font-size: 50px;
         margin: 50px 0px 0px 30px;
         color: map-get($titulos, h1); 
+        font-family: 'Roboto Serif', serif;
     }
     img{
         margin: 15px;
     }
+    .animate__zoomIn{
+        animation-duration: 3s;
+    }
+    @media screen and (max-width: 800px){
+        h1{
+            font-size: 25px;
+        }
+        img{
+            width: 50px;
+            margin-bottom: 5px;
+        }
+    }
 }
+
 .navbar{
     text-align: center;
     background-color: $cf-nav;
@@ -60,15 +75,13 @@ $titulos: (
 main{
     background-color: $cf-fondo;
     .carousel-item {
-        h5{
-            color: map-get($titulos, h5);
-            background-color: #4646608c;
+            h5{
+                color: map-get($titulos, h5);
+                background-color: #464660a6;
+                padding: 30px;
+                font-size: x-large;
+            }
         }
-        p{
-            color: $ct-beige;
-            background-color:#4646608c;
-        }
-    }
     .mi{
         h2{
             @include h2;
@@ -81,6 +94,8 @@ main{
                 height: 100%;
             }
             .texto1{
+                font-family: 'Roboto', sans-serif;
+                font-weight: bold;
                 margin: 30px auto;
                 text-align: justify;
                 color: $c-texto;
@@ -94,18 +109,16 @@ main{
         flex-direction: column;
         justify-content: center;
         h2{
+            @include h2;
             background-color: $cf-barra;
-            background: linear-gradient(270deg, #368B85 24%, rgba(241,233,229,1) 63%);
+            background: linear-gradient(90deg, rgba(241,233,229,1) 20%, #368B85 70%);
             color: map-get($titulos, h2);
-            font-size: x-large;
             text-align: right;
-            padding: 15px;
         }
         .card{
             @include card;
-        }
-    } 
-
+        } 
+    }
     @media screen and (max-width:800px){
         .somos{
             display: flex;
@@ -120,6 +133,12 @@ main{
                 padding: 10px;
                 width: 90%;
                 margin: auto;
+            }
+        }
+        .porque{
+            .img-fluid{
+                width: 70% !important;
+                padding: 20px;
             }
         }
     }   
@@ -140,7 +159,25 @@ footer{
             transform: scale(1.1);
             transition: 2s;
         }
-    }  
+    }
+    h4{
+        color: map-get($titulos, h4);
+        font-size: large;
+        margin-top: 10px;
+    } 
+    .redes{
+        display: flex;
+        justify-content: space-around;
+        margin: 10px;
+        a{
+            text-decoration: none;
+            color: $ct-beige;
+            font-size: medium;
+            &:hover{
+                color: #368B85;
+            }
+        }
+    }     
 }
 
 /*  SERVICIOS  */ 
@@ -152,6 +189,9 @@ footer{
         @include card;
         height: 300px;
         overflow: auto;
+        p{
+            padding: 20px;
+        }
     }
 }
 
@@ -160,9 +200,14 @@ footer{
     h2{
         @include h2;
     }
+    .card-noti{
+        text-align: center;
+    }
     .card{
         @include card;
+        height: 500px;;
         width: 300px;
+        overflow: auto;
     }
 }
 
@@ -170,7 +215,7 @@ footer{
 .pregfrecuentes{
     h2{
         @include h2;
-    } 
+    }
     h3{
         margin-top: 20px;
         border-color: #F1E9E5;
@@ -186,16 +231,17 @@ footer{
 
 /*   CONTATOS   */
 .contacto{
+    
     h2{
         @include h2;
     }
+
     fieldset{
         text-align: center;
         color: $c-texto;
         form{
             margin-left: 20px;
-            text-align: start;
+            text-align: center;
         }
     }
 }
-

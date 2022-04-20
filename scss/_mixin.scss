@@ -32,12 +32,15 @@
     h5{
         color: map-get($titulos, h5);
         background-color: #6aa5a171; 
-        padding: 5px;               
+        padding: 8px; 
+        font-family: 'Roboto Serif', serif;              
         }
     p{
         color: $c-texto;
-        padding: 10px;
-        text-align: justify;
+        padding: 8x;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
     }
 }
 
@@ -45,7 +48,13 @@
     background-color: $cf-barra;
     background: linear-gradient(90deg, #368B85 24%, rgba(241,233,229,1) 63%);
     color: map-get($titulos, h2);
+    font-family: 'Roboto Serif', serif;
+    font-style:0;
     font-size: x-large;
     text-align: left;
     padding: 15px; 
+    @media screen and (max-width: 800px){
+        font-size: medium;
+    }
 }
+

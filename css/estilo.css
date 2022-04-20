@@ -31,10 +31,26 @@
   font-size: 50px;
   margin: 50px 0px 0px 30px;
   color: #F1E9E5;
+  font-family: 'Roboto Serif', serif;
 }
 
 .encabezado img {
   margin: 15px;
+}
+
+.encabezado .animate__zoomIn {
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+@media screen and (max-width: 800px) {
+  .encabezado h1 {
+    font-size: 25px;
+  }
+  .encabezado img {
+    width: 50px;
+    margin-bottom: 5px;
+  }
 }
 
 .navbar {
@@ -74,12 +90,9 @@ main {
 
 main .carousel-item h5 {
   color: #d6d6e2;
-  background-color: #4646608c;
-}
-
-main .carousel-item p {
-  color: #F1E9E5;
-  background-color: #4646608c;
+  background-color: #464660a6;
+  padding: 30px;
+  font-size: x-large;
 }
 
 main .mi h2 {
@@ -87,9 +100,17 @@ main .mi h2 {
   background: -webkit-gradient(linear, left top, right top, color-stop(24%, #368B85), color-stop(63%, #f1e9e5));
   background: linear-gradient(90deg, #368B85 24%, #f1e9e5 63%);
   color: #F1E9E5;
+  font-family: 'Roboto Serif', serif;
+  font-style: 0;
   font-size: x-large;
   text-align: left;
   padding: 15px;
+}
+
+@media screen and (max-width: 800px) {
+  main .mi h2 {
+    font-size: medium;
+  }
 }
 
 main .mi .somos {
@@ -105,6 +126,8 @@ main .mi .somos .fotoLaura {
 }
 
 main .mi .somos .texto1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
   margin: 30px auto;
   text-align: justify;
   color: #464660;
@@ -127,12 +150,25 @@ main .porque {
 
 main .porque h2 {
   background-color: #368B85;
-  background: -webkit-gradient(linear, right top, left top, color-stop(24%, #368B85), color-stop(63%, #f1e9e5));
-  background: linear-gradient(270deg, #368B85 24%, #f1e9e5 63%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(24%, #368B85), color-stop(63%, #f1e9e5));
+  background: linear-gradient(90deg, #368B85 24%, #f1e9e5 63%);
   color: #F1E9E5;
+  font-family: 'Roboto Serif', serif;
+  font-style: 0;
   font-size: x-large;
-  text-align: right;
+  text-align: left;
   padding: 15px;
+  background-color: #368B85;
+  background: -webkit-gradient(linear, left top, right top, color-stop(20%, #f1e9e5), color-stop(70%, #368B85));
+  background: linear-gradient(90deg, #f1e9e5 20%, #368B85 70%);
+  color: #F1E9E5;
+  text-align: right;
+}
+
+@media screen and (max-width: 800px) {
+  main .porque h2 {
+    font-size: medium;
+  }
 }
 
 main .porque .card {
@@ -149,13 +185,16 @@ main .porque .card {
 main .porque .card h5 {
   color: #d6d6e2;
   background-color: #6aa5a171;
-  padding: 5px;
+  padding: 8px;
+  font-family: 'Roboto Serif', serif;
 }
 
 main .porque .card p {
   color: #464660;
-  padding: 10px;
-  text-align: justify;
+  padding: 8x;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 800px) {
@@ -178,6 +217,10 @@ main .porque .card p {
     padding: 10px;
     width: 90%;
     margin: auto;
+  }
+  main .porque .img-fluid {
+    width: 70% !important;
+    padding: 20px;
   }
 }
 
@@ -231,15 +274,62 @@ footer .botcon:hover {
   transition: 2s;
 }
 
+footer h4 {
+  color: #F1E9E5;
+  font-size: large;
+  margin-top: 10px;
+}
+
+footer .redes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 10px;
+}
+
+footer .redes .bi {
+  color: yellow;
+}
+
+footer .redes img {
+  color: #368b85;
+  margin: 10px;
+  width: 30px;
+}
+
+footer .redes img:hover {
+  color: #368B85;
+}
+
+footer .redes a {
+  text-decoration: none;
+  color: #F1E9E5;
+  font-size: medium;
+}
+
+footer .redes a:hover {
+  color: #368B85;
+}
+
 /*  SERVICIOS  */
 .servicios h2 {
   background-color: #368B85;
   background: -webkit-gradient(linear, left top, right top, color-stop(24%, #368B85), color-stop(63%, #f1e9e5));
   background: linear-gradient(90deg, #368B85 24%, #f1e9e5 63%);
   color: #F1E9E5;
+  font-family: 'Roboto Serif', serif;
+  font-style: 0;
   font-size: x-large;
   text-align: left;
   padding: 15px;
+}
+
+@media screen and (max-width: 800px) {
+  .servicios h2 {
+    font-size: medium;
+  }
 }
 
 .servicios .card {
@@ -258,13 +348,20 @@ footer .botcon:hover {
 .servicios .card h5 {
   color: #d6d6e2;
   background-color: #6aa5a171;
-  padding: 5px;
+  padding: 8px;
+  font-family: 'Roboto Serif', serif;
 }
 
 .servicios .card p {
   color: #464660;
-  padding: 10px;
-  text-align: justify;
+  padding: 8x;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+.servicios .card p {
+  padding: 20px;
 }
 
 /*  NOTICIAS  */
@@ -273,9 +370,21 @@ footer .botcon:hover {
   background: -webkit-gradient(linear, left top, right top, color-stop(24%, #368B85), color-stop(63%, #f1e9e5));
   background: linear-gradient(90deg, #368B85 24%, #f1e9e5 63%);
   color: #F1E9E5;
+  font-family: 'Roboto Serif', serif;
+  font-style: 0;
   font-size: x-large;
   text-align: left;
   padding: 15px;
+}
+
+@media screen and (max-width: 800px) {
+  .noticias h2 {
+    font-size: medium;
+  }
+}
+
+.noticias .card-noti {
+  text-align: center;
 }
 
 .noticias .card {
@@ -287,19 +396,24 @@ footer .botcon:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: 500px;
   width: 300px;
+  overflow: auto;
 }
 
 .noticias .card h5 {
   color: #d6d6e2;
   background-color: #6aa5a171;
-  padding: 5px;
+  padding: 8px;
+  font-family: 'Roboto Serif', serif;
 }
 
 .noticias .card p {
   color: #464660;
-  padding: 10px;
-  text-align: justify;
+  padding: 8x;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
 }
 
 /*   PREGUNTAS FRECUENTES   */
@@ -308,9 +422,17 @@ footer .botcon:hover {
   background: -webkit-gradient(linear, left top, right top, color-stop(24%, #368B85), color-stop(63%, #f1e9e5));
   background: linear-gradient(90deg, #368B85 24%, #f1e9e5 63%);
   color: #F1E9E5;
+  font-family: 'Roboto Serif', serif;
+  font-style: 0;
   font-size: x-large;
   text-align: left;
   padding: 15px;
+}
+
+@media screen and (max-width: 800px) {
+  .pregfrecuentes h2 {
+    font-size: medium;
+  }
 }
 
 .pregfrecuentes h3 {
@@ -333,9 +455,17 @@ footer .botcon:hover {
   background: -webkit-gradient(linear, left top, right top, color-stop(24%, #368B85), color-stop(63%, #f1e9e5));
   background: linear-gradient(90deg, #368B85 24%, #f1e9e5 63%);
   color: #F1E9E5;
+  font-family: 'Roboto Serif', serif;
+  font-style: 0;
   font-size: x-large;
   text-align: left;
   padding: 15px;
+}
+
+@media screen and (max-width: 800px) {
+  .contacto h2 {
+    font-size: medium;
+  }
 }
 
 .contacto fieldset {
@@ -345,6 +475,6 @@ footer .botcon:hover {
 
 .contacto fieldset form {
   margin-left: 20px;
-  text-align: start;
+  text-align: center;
 }
 /*# sourceMappingURL=estilo.css.map */
