@@ -92,7 +92,7 @@ main .carousel-item h5 {
   color: #d6d6e2;
   background-color: #464660a6;
   padding: 30px;
-  font-size: large;
+  font-size: xx-large;
 }
 
 main .mi h2 {
@@ -198,6 +198,9 @@ main .porque .card p {
 }
 
 @media screen and (max-width: 800px) {
+  main .carousel-item h5 {
+    font-size: medium;
+  }
   main .somos {
     display: -webkit-box;
     display: -ms-flexbox;
