@@ -260,3 +260,32 @@ footer{
         }
     }
 }
+
+/*   ERROR 404   */
+main{
+    background-color: #464660;
+    h1{
+        margin: 20px;
+        color: #368B85;
+     } 
+   .error{
+       display: flex;
+       .textos{
+            display: flex;
+            flex-direction: column;
+            margin: 5px;
+            justify-content: start;
+            .tex1{
+                color: #F1E9E5;
+            }
+            .tex2{
+                color: #F1E9E5;
+            }
+            .imagen{
+                width: auto;
+                top: 0;
+                left: 0;
+            }
+        }
+   }
+}
