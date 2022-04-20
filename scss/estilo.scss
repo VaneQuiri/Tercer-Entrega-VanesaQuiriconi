@@ -79,7 +79,7 @@ main{
                 color: map-get($titulos, h5);
                 background-color: #464660a6;
                 padding: 30px;
-                font-size: x-large;
+                font-size: large;
             }
         }
     .mi{
@@ -169,6 +169,10 @@ footer{
         display: flex;
         justify-content: space-around;
         margin: 10px;
+        img{
+            padding: 5px;
+            width: 40px;
+        }
         a{
             text-decoration: none;
             color: $ct-beige;
@@ -177,7 +181,12 @@ footer{
                 color: #368B85;
             }
         }
-    }     
+    } 
+    @media screen and (max-width: 800px) {
+        .redes{
+            flex-direction: column;
+        }
+    }    
 }
 
 /*  SERVICIOS  */ 

@@ -92,7 +92,7 @@ main .carousel-item h5 {
   color: #d6d6e2;
   background-color: #464660a6;
   padding: 30px;
-  font-size: x-large;
+  font-size: large;
 }
 
 main .mi h2 {
@@ -289,18 +289,9 @@ footer .redes {
   margin: 10px;
 }
 
-footer .redes .bi {
-  color: yellow;
-}
-
 footer .redes img {
-  color: #368b85;
-  margin: 10px;
-  width: 30px;
-}
-
-footer .redes img:hover {
-  color: #368B85;
+  padding: 5px;
+  width: 40px;
 }
 
 footer .redes a {
@@ -311,6 +302,15 @@ footer .redes a {
 
 footer .redes a:hover {
   color: #368B85;
+}
+
+@media screen and (max-width: 800px) {
+  footer .redes {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 /*  SERVICIOS  */
