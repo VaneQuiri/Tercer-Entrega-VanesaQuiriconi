@@ -46,7 +46,7 @@
 
 @mixin h2(){
     background-color: $cf-barra;
-    background: linear-gradient(90deg, #368B85 50%, rgba(241,233,229,1) 63%);
+    background: linear-gradient(90deg, #368B85 44%, rgba(241,233,229,1) 83%);
     color: map-get($titulos, h2);
     font-family: 'Roboto Serif', serif;
     font-style:0;
