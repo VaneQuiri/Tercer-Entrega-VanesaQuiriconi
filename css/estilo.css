@@ -200,6 +200,7 @@ main .porque .card p {
 @media screen and (max-width: 800px) {
   main .carousel-item h5 {
     font-size: medium;
+    padding: 20px;
   }
   main .somos {
     display: -webkit-box;
