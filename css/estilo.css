@@ -483,46 +483,73 @@ footer .redes a:hover {
 }
 
 /*   ERROR 404   */
-.falla {
+body {
   background-color: #464660;
+  background-size: cover;
 }
 
-.falla h1 {
-  margin: 20px;
+body .error {
+  background-color: #464660;
+  background-size: cover;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-template-areas: "h1 img" "tex1 img" "tex2 img" "enlase enlase";
+}
+
+body .error h1 {
   color: #368B85;
+  font-size: 40px;
+  padding: 80px 0px 0px 180px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: h1;
+  font-family: 'Roboto Serif', serif;
 }
 
-.falla .error {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+body .error img {
+  width: 60%;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 2;
+  grid-area: img;
+  padding: 80px 50px 10px 10px;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
 }
 
-.falla .error .textos {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: 5px;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-}
-
-.falla .error .textos .tex1 {
+body .error .tex1 {
   color: #F1E9E5;
+  font-size: medium;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: tex1;
+  padding: 0px 0px 10px 180px;
 }
 
-.falla .error .textos .tex2 {
+body .error .tex2 {
   color: #F1E9E5;
+  font-size: large;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: tex2;
+  padding: 5px 0px 10px 180px;
+  font-family: 'Roboto', sans-serif;
 }
 
-.falla .error .textos .imagen {
-  width: auto;
-  top: 0;
-  left: 0;
+body .error .enlase {
+  color: #B4B897;
+  margin: auto;
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: enlase;
+  margin-top: -10px;
+  font-family: 'Roboto Serif', serif;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
 }
 /*# sourceMappingURL=estilo.css.map */

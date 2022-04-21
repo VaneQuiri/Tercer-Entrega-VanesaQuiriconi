@@ -262,30 +262,56 @@ footer{
 }
 
 /*   ERROR 404   */
-.falla{
-    background-color: #464660;
-    h1{
-        margin: 20px;
-        color: #368B85;
-     } 
-   .error{
-       display: flex;
-       .textos{
-            display: flex;
-            flex-direction: column;
-            margin: 5px;
-            justify-content: start;
-            .tex1{
-                color: #F1E9E5;
-            }
-            .tex2{
-                color: #F1E9E5;
-            }
-            .imagen{
-                width: auto;
-                top: 0;
-                left: 0;
-            }
+body{
+    background-color: #464660;;
+    background-size: cover;
+
+    .error{
+        background-color: #464660;;
+        background-size: cover;
+        display: grid;
+        grid-template-columns:(1fr 1fr) ;
+    grid-template-rows: (1fr 1fr 1fr 1fr);
+    grid-template-areas: 
+        "h1 img"
+        "tex1 img"
+        "tex2 img"
+        "enlase enlase";
+        h1{
+            color: #368B85;
+            font-size: 40px;
+            padding: 80px 0px 0px 180px;
+            grid-area: h1;
+            font-family: 'Roboto Serif', serif;
         }
-   }
-}
+        img{
+            width: 60%;
+            grid-area: img;
+            padding: 80px 50px 10px 10px;
+            animation-duration: 3s;
+        }  
+        .tex1{
+            color: $ct-beige;
+            font-size: medium;
+            grid-area: tex1;
+            padding: 0px 0px 10px 180px;
+            
+        }
+        .tex2{
+            color: $ct-beige;
+            font-size: large;
+            grid-area: tex2;
+            padding: 5px 0px 10px 180px;
+            font-family: 'Roboto', sans-serif;
+        }
+        .enlase{
+            color: #B4B897;
+            margin: auto;
+            grid-area: enlase;
+            margin-top: -10px;
+            font-family: 'Roboto Serif', serif;
+            animation-duration: 3s;
+        }
+        
+    } 
+} 
