@@ -271,8 +271,8 @@ body{
         background-size: cover;
         display: grid;
         grid-template-columns:(1fr 1fr) ;
-    grid-template-rows: (1fr 1fr 1fr 1fr);
-    grid-template-areas: 
+        grid-template-rows: (1fr 1fr 1fr 1fr);
+        grid-template-areas: 
         "h1 img"
         "tex1 img"
         "tex2 img"
@@ -295,7 +295,6 @@ body{
             font-size: medium;
             grid-area: tex1;
             padding: 0px 0px 10px 180px;
-            
         }
         .tex2{
             color: $ct-beige;
