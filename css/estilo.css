@@ -497,7 +497,10 @@ body .error {
       grid-template-columns: 1fr 1fr;
   -ms-grid-rows: 1fr 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr 1fr;
-      grid-template-areas: "h1 img" "tex1 img" "tex2 img" "enlase enlase";
+      grid-template-areas: "h1 img"
+ "tex1 img"
+ "tex2 img"
+ "enlase enlase";
 }
 
 body .error h1 {
@@ -505,7 +508,9 @@ body .error h1 {
   font-size: 40px;
   padding: 80px 0px 0px 180px;
   -ms-grid-row: 1;
+    grid-row: 1;
   -ms-grid-column: 1;
+    grid-column: 1;
   grid-area: h1;
   font-family: 'Roboto Serif', serif;
 }
